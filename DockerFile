@@ -1,7 +1,7 @@
 
 FROM node:20
 WORKDIR /gallery
-COPY . .
+COPY . /gallery
 RUN npm install
 ENTRYPOINT npm start
 EXPOSE 4200
