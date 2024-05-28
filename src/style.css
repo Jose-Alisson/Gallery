@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Rambla:ital,wght@0,400;0,700;1,400;1,700&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Khula';
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Rambla', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #FCE4EC /**/
+}
+
+.banner{
+    padding: 2em;
+    background: linear-gradient(to right, #EC407A, #BA68C8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+    max-width: 100%;
+    margin: auto;
+}
+
+.galery {
+    margin: auto;
+    width: 70%;
+    background: #FCE4EC;
+    padding: 2em;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    gap: 10px;
+}
+
+.photo {
+    background: #BDBDBD;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.photo img{
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo img:hover{
+    transform: scale(1.2);
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.tall {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 600px) {
+    .galery {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-auto-rows: 150px;
+        border-radius: 0;
+        padding: 1em;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .galery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 120px;
+    }
+}

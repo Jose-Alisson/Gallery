@@ -1,0 +1,23 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts": "tsx watch server.ts",
+    "start": "node server.js"
+  },
+  "author": "Alisson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.1"
+  },
+  "optionalDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.11.0"
+  }
+}
